@@ -1,3 +1,3 @@
-# Reading Modern C++ Programing with Test-Driven Development
+# Reading Modern C++ Programming with Test-Driven Development
 
-Repostitory with content related to reading the boook Modern C++ Programming with Test-Driven Development - Code Better Sleep Beter, written by Jeff Langr.
+Repository with content related to reading the book Modern C++ Programming with Test-Driven Development - Code Better Sleep Better, written by Jeff Langr.
