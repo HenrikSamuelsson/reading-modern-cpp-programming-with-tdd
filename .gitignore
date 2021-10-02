@@ -58,3 +58,10 @@
 
 # User-specific .bazelrc
 user.bazelrc
+
+# Ignore content in an early test project
+/my_workspace/
+
+# Ignore the book authors downloaded example code
+/lotdd-code/
+
