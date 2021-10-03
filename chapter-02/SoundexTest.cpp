@@ -11,11 +11,18 @@ class Soundex {
 };
 
 
-
 TEST(SoundexEncoding, RetainsSoleLetterOfOneLetterWord) {
    Soundex soundex;
 
    auto encoded = soundex.encode("A");
 
    ASSERT_THAT(encoded, Eq("A"));
+}
+
+TEST(SoundexEncoding, PadsWithZerosToEnsureThreeDigits) {
+	Soundex soundex;
+	
+	auto encoded = soundex.encode("I");
+	
+	ASSERT_THAT(encoded, Eq("I000"));
 }
