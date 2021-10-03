@@ -4,10 +4,16 @@
 using ::testing::Eq;
 
 class Soundex {
-   public:
+public:
    std::string encode(const std::string& word) const {
-      return word;
+      return zeroPad(word);
    }
+   
+private:
+	std::string zeroPad(const std::string& word) const {
+		return word + "000";
+	}
+   
 };
 
 
@@ -16,7 +22,7 @@ TEST(SoundexEncoding, RetainsSoleLetterOfOneLetterWord) {
 
    auto encoded = soundex.encode("A");
 
-   ASSERT_THAT(encoded, Eq("A"));
+   ASSERT_THAT(encoded, Eq("A000"));
 }
 
 TEST(SoundexEncoding, PadsWithZerosToEnsureThreeDigits) {
