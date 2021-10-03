@@ -6,7 +6,7 @@ Repository with content related to reading the book Modern C++ Programming with 
 
 Currently using Bazel to build the projects.
 
-Commmand to build is:
+Command to build is:
 
 ```bash
 bazel test --test_output=all //:soundex_test
