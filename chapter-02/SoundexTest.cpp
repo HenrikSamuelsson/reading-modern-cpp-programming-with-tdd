@@ -1,4 +1,7 @@
 #include <string>
+#include "gmock/gmock.h"
+
+using ::testing::Eq;
 
 class Soundex {
    public:
@@ -7,12 +10,12 @@ class Soundex {
    }
 };
 
-#include "gmock/gmock.h"
+
 
 TEST(SoundexEncoding, RetainsSoleLetterOfOneLetterWord) {
    Soundex soundex;
 
    auto encoded = soundex.encode("A");
 
-   ASSERT_THAT(encoded, testing::Eq("A"));
+   ASSERT_THAT(encoded, Eq("A"));
 }
