@@ -2,6 +2,10 @@
 
 Repository with content related to reading the book Modern C++ Programming with Test-Driven Development - Code Better Sleep Better, written by Jeff Langr.
 
+## Book Errata
+
+https://pragprog.com/cms/errata/lotdd-errata/
+
 ## Bazel
 
 Currently using Bazel to build the projects.
