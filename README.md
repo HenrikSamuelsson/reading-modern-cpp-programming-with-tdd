@@ -4,7 +4,7 @@ Repository with content related to reading the book Modern C++ Programming with 
 
 ## Book Errata
 
-https://pragprog.com/cms/errata/lotdd-errata/
+<https://pragprog.com/cms/errata/lotdd-errata/>
 
 ## Bazel
 
