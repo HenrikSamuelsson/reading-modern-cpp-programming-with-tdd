@@ -2,6 +2,7 @@
 #define soundex_h
 
 #include <string>
+#include <unordered_map>
 
 class Soundex
 {
@@ -33,11 +34,13 @@ private:
 
    std::string encodeDigit(char letter) const 
    {
-      if (letter == 'c') 
+      const std::unordered_map<char, std::string> encodings
       {
-         return "2";
-      }
-      return "1";
+         {'b', "1"},
+         {'c', "2"},
+         {'d', "3"}
+      };
+      return encodings.find(letter)->second;
    }
 
    std::string zeroPad(const std::string& word) const 
