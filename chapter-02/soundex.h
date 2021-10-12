@@ -11,7 +11,7 @@ public:
 
    std::string encode(const std::string& word) const 
    {
-      return zeroPad(head(word) + encodedDigits(word));      
+      return zeroPad(head(word) + encodedDigits(tail(word)));      
    }
 
 private:
@@ -20,15 +20,20 @@ private:
       return word.substr(0, 1);
    }
 
+   std::string tail(const std::string& word) const
+   {
+      return word.substr(1);
+   }
+
    std::string encodedDigits(const std::string& word) const
    {
-      if (word.length() > 1) 
-      {
-         return encodeDigit(word[1]);
-      }
-      else 
+      if (word.empty()) 
       {
          return "";
+      }   
+      else
+      {
+         return encodeDigit(word.front());
       }
    }
 
