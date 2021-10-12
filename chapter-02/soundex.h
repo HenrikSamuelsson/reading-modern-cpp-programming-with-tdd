@@ -33,7 +33,12 @@ private:
       }   
       else
       {
-         return encodeDigit(word.front());
+         std::string encoding;
+         for (auto letter: word)
+         {
+            encoding += encodeDigit(letter);
+         }
+         return encoding;
       }
    }
 
