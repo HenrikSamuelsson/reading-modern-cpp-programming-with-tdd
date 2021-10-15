@@ -37,5 +37,9 @@ TEST_F(SoundexEncoding, IgnoresVowelLikeLetters) {
 }
 
 TEST_F(SoundexEncoding, CombineDuplicateEncodings) {
+	ASSERT_THAT(soundex.encodedDigit('b'), Eq(soundex.encodedDigit('f')));
+   	ASSERT_THAT(soundex.encodedDigit('c'), Eq(soundex.encodedDigit('g')));
+   	ASSERT_THAT(soundex.encodedDigit('d'), Eq(soundex.encodedDigit('t')));
+
 	ASSERT_THAT(soundex.encode("Abfcgdt"), Eq("A123"));
 }
