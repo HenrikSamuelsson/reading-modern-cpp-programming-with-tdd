@@ -32,7 +32,7 @@ public:
          
          {'r', "6"}
       };
-      auto it = encodings.find(letter);
+      auto it = encodings.find(tolower(letter));
       return it == encodings.end() ? NotADigit : it->second;
    }
 
