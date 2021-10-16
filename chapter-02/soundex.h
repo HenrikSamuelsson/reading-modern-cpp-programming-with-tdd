@@ -11,7 +11,7 @@ public:
 
    std::string encode(const std::string& word) const 
    {
-      return zeroPad(head(word) + encodedDigits(tail(word)));      
+      return zeroPad(upperFront(head(word)) + encodedDigits(tail(word)));      
    }
 
    std::string encodedDigit(char letter) const 
@@ -82,6 +82,11 @@ private:
          return "";
       }
       return std::string(1, encoding.back());
+   }
+
+   std::string upperFront(const std::string& string) const 
+   {
+     return std::string(1, std::toupper(static_cast<unsigned char>(string.front())));
    }
 };
 
