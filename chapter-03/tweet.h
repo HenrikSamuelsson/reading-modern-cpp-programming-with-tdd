@@ -1,5 +1,5 @@
-#ifndef Tweet_h
-#define Tweet_h
+#ifndef tweet_h
+#define tweet_h
 class Tweet {
 };
-#endif
+#endif  // tweet_h

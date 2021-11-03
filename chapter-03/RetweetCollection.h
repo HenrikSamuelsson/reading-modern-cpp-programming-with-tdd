@@ -6,23 +6,23 @@
 class RetweetCollection {
 public:
    RetweetCollection() 
-      : size_(0) {
+      : empty_(true) {
    }
 
    bool isEmpty() const {
-      return 0 == size();
+      return empty_;
+   }
+
+ void add(const Tweet& tweet) {
+      empty_ = false;
    }
 
    unsigned int size() const {
-      return size_;
-   }
-
-   void add(const Tweet& tweet) {
-      size_ = 1;
+      return isEmpty() ? 0 : 1;
    }
 
 private:
-   unsigned int size_;
+   bool empty_;
 };
 
 #endif  // CHAPTER_03_RETWEETCOLLECTION_H_
