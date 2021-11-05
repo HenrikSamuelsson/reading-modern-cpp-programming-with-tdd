@@ -32,3 +32,18 @@ TEST_F(ARetweetCollection, HasSizeOfOneAfterTweetAdded)
 
     ASSERT_THAT(collection.size(), Eq(1u));
 }
+
+TEST_F(ARetweetCollection, IsEmptyWhenItsSizeIsZero)
+{
+    ASSERT_THAT(collection.size(), Eq(0u));
+
+    ASSERT_TRUE(collection.isEmpty());
+}
+
+TEST_F(ARetweetCollection, IsNotEmptyWhenItsSizeIsNonZero)
+{
+    collection.add(Tweet());
+    ASSERT_THAT(collection.size(), Gt(0u));
+
+    ASSERT_FALSE(collection.isEmpty());
+}
