@@ -45,4 +45,4 @@ A unit test have up to four parts:
 
 #### Time Your Test Cycle
 
-Work in tiny steps adding minimal increments to the code. For example 5 minutes to come up and setup the next test. 10 minutes to get the test to pass. And then 10 minutes refactor the code.
+Work in tiny steps adding minimal increments to the code. For example 5 minutes to come up and setup the next test. 10 minutes to get the test to pass. And then 10 minutes to refactor the code.
