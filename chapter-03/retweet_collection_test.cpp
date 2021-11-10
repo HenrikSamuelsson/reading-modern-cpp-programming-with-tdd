@@ -9,6 +9,14 @@ class ARetweetCollection: public Test {
     RetweetCollection collection;
 };
 
+class ARetweetCollectionWithOneTweet: public Test {
+    public:
+        RetweetCollection collection;
+        void SetUp() override {
+            collection.add(Tweet());
+        }
+};
+
 TEST_F(ARetweetCollection, IsEmptyWhenCreated)
 {
     ASSERT_TRUE(collection.isEmpty());
