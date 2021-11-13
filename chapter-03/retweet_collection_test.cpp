@@ -5,16 +5,16 @@
 using namespace ::testing;
 
 class ARetweetCollection: public Test {
-    public:
+ public:
     RetweetCollection collection;
 };
 
 class ARetweetCollectionWithOneTweet: public Test {
-    public:
-        RetweetCollection collection;
-        void SetUp() override {
-            collection.add(Tweet());
-        }
+ public:
+    RetweetCollection collection;
+     void SetUp() override {
+        collection.add(Tweet());
+     }
 };
 
 TEST_F(ARetweetCollection, IsEmptyWhenCreated)
@@ -54,4 +54,12 @@ TEST_F(ARetweetCollection, IsNotEmptyWhenItsSizeIsNonZero)
     ASSERT_THAT(collection.size(), Gt(0u));
 
     ASSERT_FALSE(collection.isEmpty());
+}
+
+TEST_F(ARetweetCollectionWithOneTweet, IsNoLongerEmpty) {
+    ASSERT_FALSE(collection.isEmpty());
+}
+
+TEST_F(ARetweetCollectionWithOneTweet, HasSizeOfOne) {
+    ASSERT_THAT(collection.size(), Eq(1u));
 }
