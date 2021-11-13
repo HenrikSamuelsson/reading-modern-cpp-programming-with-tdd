@@ -72,3 +72,12 @@ TEST_F(ARetweetCollectionWithOneTweet, IsNoLongerEmpty) {
 TEST_F(ARetweetCollectionWithOneTweet, HasSizeOfOne) {
     ASSERT_THAT(collection.size(), Eq(1u));
 }
+
+
+TEST_F(ARetweetCollectionWithOneTweet, IgnoresDuplicateTweetAdded) {
+    Tweet duplicate(*tweet);
+
+    collection.add(duplicate);
+
+    ASSERT_THAT(collection.size(), Eq(1u));
+}
