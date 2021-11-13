@@ -12,9 +12,18 @@ class ARetweetCollection: public Test {
 class ARetweetCollectionWithOneTweet: public Test {
  public:
     RetweetCollection collection;
-     void SetUp() override {
-        collection.add(Tweet());
-     }
+
+    Tweet* tweet;
+
+    void SetUp() override {
+        tweet = new Tweet("msg", "@user");
+        collection.add(*tweet);
+    }
+
+    void TearDown() override {
+        delete tweet;
+        tweet = nullptr;
+    }
 };
 
 TEST_F(ARetweetCollection, IsEmptyWhenCreated)
