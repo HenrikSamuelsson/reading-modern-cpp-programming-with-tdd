@@ -18,7 +18,7 @@ bazel test --test_output=all //:soundex_test
 
 Where soundex_test is the "name" variable in the Bazel BUILD file.
 
-## Key Takeaways
+## Book Takeaways
 
 Some notes on things learned from each chapter in the book.
 
@@ -46,3 +46,11 @@ A unit test have up to four parts:
 #### Time Your Test Cycle
 
 Work in tiny steps adding minimal increments to the code. For example 5 minutes to come up and setup the next test. 10 minutes to get the test to pass. And then 10 minutes to refactor the code.
+
+### Chapter 4
+
+A fixture makes it possible to avoid duplication by setting up common objects once in the fixture and multiple tests can refer to the fixture. A Goggle test project can have multiple different fixtures. A fixture can include a setup and/or a teardown section.
+
+Tests need to run fast because a project can have thousand of tests, as a rule of thumb a test should run in a millisecond.
+
+Matchers can be used to make the tests more expressive and can also make the test failure messages easier to decrypt. Example of matchers in GoggleTest are Eq (equal), Ge (greater than), IsNull.
